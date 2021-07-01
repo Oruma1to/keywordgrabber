@@ -2,7 +2,7 @@ const axios = require('axios')
 const cheerio = require('cheerio')
 const prompt = require('prompt-sync')({ sigint: true })
 
-const runScraper = async () => {
+const runKeywordGrabber = async () => {
   const new_url = prompt('Enter a URL: ')
   let url = new_url
   if (url.includes('youtube.com')) {
@@ -25,8 +25,8 @@ const runScraper = async () => {
 
   } else {
     console.log('Please enter a valid youtube url')
-    runScraper()
+    runKeywordGrabber()
   }
 }
 
-runScraper()
+runKeywordGrabber()
